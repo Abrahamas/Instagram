@@ -26,11 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let currentUser = PFUser.current() {
             print("Welcome back \(currentUser.username!) 😀")
             
-//            // TODO: Load Chat view controller and set as root view controller
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
-//            self.window?.rootViewController = HomeViewController
-//        
+            // TODO: Load Chat view controller and set as root view controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let HomeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+            self.window?.rootViewController = HomeViewController
+        
     }
         NotificationCenter.default.addObserver(forName: Notification.Name("didLogout"), object: nil, queue: OperationQueue.main) { (Notification) in
             print("Logout notification received")
